@@ -13,7 +13,9 @@ export default function ImageSlider({ item }) {
   const { width } = useWindowDimensions();
   return (
     <View style={[styles.container, { width }]}>
-      <View style={{ flex: 0.3, alignItems:'center',justifyContent:'center' }}>
+      <View
+        style={{ flex: 0.3, alignItems: 'center', justifyContent: 'center' }}
+      >
         <Text style={{ color: COLORS.gray, fontSize: SIZES.xLarge }}>
           {item.title}
         </Text>
@@ -32,15 +34,13 @@ const styles = StyleSheet.create({
     // flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  
   },
   image: {
     // flex: 0.5,
     justifyContent: 'center',
     alignItems: 'center',
-    width:50,
-    height:60,
-    
+    width: 50,
+    height: 60,
   },
   description: {
     fontWeight: '300',

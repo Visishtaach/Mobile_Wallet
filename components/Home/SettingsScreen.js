@@ -1,18 +1,18 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Home = () => {
+const Settings = () => {
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
+      <Text>Settings</Text>
     </View>
   )
 }
 
-export default Home
+export default Settings
 
 const styles = StyleSheet.create({
   container:{
-    padding:30
+      padding:30
   }
 })

@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity,Dimensions } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Dimensions,
+} from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import React from 'react';
@@ -6,10 +13,9 @@ import { COLORS, SIZES } from '../../constants';
 import Swiper from 'react-native-swiper';
 const windowWidth = Dimensions.get('window').width;
 const Tour = ({ navigation }) => {
- 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+      <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
         <Text style={styles.touch}>X</Text>
       </TouchableOpacity>
       <Swiper autoplay={true} loop={true}>
@@ -112,7 +118,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 10,
-    
   },
   image: {
     marginTop: 40,
@@ -123,7 +128,7 @@ const styles = StyleSheet.create({
   touch: {
     fontSize: 20,
     color: 'gray',
-    padding:10,
+    padding: 10,
     position: 'relative',
     marginTop: 10,
     marginLeft: 260,
@@ -148,6 +153,5 @@ const styles = StyleSheet.create({
     fontSize: SIZES.medium,
     color: COLORS.secondary,
     lineHeight: 24,
-    
   },
 });

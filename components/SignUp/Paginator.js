@@ -22,8 +22,8 @@ export default function Paginator({ data, scrollX }) {
           extrapolate: 'clamp',
         });
         return (
-          <Animated.View 
-            style={[styles.dot, { width: dotWidth,opacity }]}
+          <Animated.View
+            style={[styles.dot, { width: dotWidth, opacity }]}
             key={index.toString()}
           />
         );
@@ -35,7 +35,7 @@ export default function Paginator({ data, scrollX }) {
 const styles = StyleSheet.create({
   paginator: {
     flexDirection: 'row',
-    justifyContent:'center',
+    justifyContent: 'center',
     height: 64,
   },
   dot: {
