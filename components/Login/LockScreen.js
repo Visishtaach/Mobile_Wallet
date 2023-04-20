@@ -26,7 +26,7 @@ const LockScreen = ({ navigation }) => {
         continue;
       }
     }
-    console.log('num clicked');
+    // console.log('num clicked');
     setOtp(tempCode);
   };
 
@@ -40,7 +40,7 @@ const LockScreen = ({ navigation }) => {
         continue;
       }
     }
-    console.log('cancel clicked');
+    // console.log('cancel clicked');
     setOtp(tempCode);
   };
 

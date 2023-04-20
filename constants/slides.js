@@ -5,7 +5,7 @@ export const slides = [
     id:1,
     title:'Private and Secure',
     description:'Private keys never leave your device',
-    imageUrl:require('../assets/pns.png')
+    imageUrl:require('../assets/security-checked--v2.png')
 },
 {
     id: 2,

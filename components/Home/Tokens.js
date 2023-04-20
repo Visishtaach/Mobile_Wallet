@@ -38,7 +38,7 @@ const Tokens = () => {
 
         <TouchableOpacity
           onPress={() => {
-            console.log('add tokens');
+            // console.log('add tokens');
           }}
         >
           <Text style={{ padding: 2, fontSize: 18 }}>

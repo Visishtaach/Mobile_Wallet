@@ -10,6 +10,7 @@ import Tour from '../components/Login/Tour';
 import Settings from '../components/Home/SettingsScreen';
 import Browser from '../components/Home/Browser';
 import Screen1 from '../components/Screens/Screen1';
+import Screen2 from '../components/Screens/Screen2';
 import Discover from '../components/Home/Discover';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -81,6 +82,7 @@ export default function Auth() {
         <Stack.Screen name="Tour" component={Tour} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="Screen1" component={Screen1} />
+        <Stack.Screen name="Screen2" component={Screen2} />
       </Stack.Navigator>
     </NavigationContainer>
 
