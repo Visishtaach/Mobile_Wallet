@@ -5,21 +5,22 @@ import {
   View,
   Dimensions,
   TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 import React, { useState } from 'react';
 import { COLORS, SIZES } from '../../constants';
 import Header from './Header';
 import Ionicons from '@expo/vector-icons/Ionicons';
-
 import Main from './Main';
+import { TokensAdded } from '../../helpers/TokensAdded';
+import Tokens from './Tokens';
+import NftSection from './NftSection';
 
 const Home = ({ navigation }) => {
   const [walletAmount, setWalletAmount] = useState(0);
   const [status, setStatus] = useState('Tokens');
-  const selectTabHandler = (status) => {
-    console.log(status);
-    setStatus(status);
-  };
+  console.log(TokensAdded);
+
   return (
     <SafeAreaView style={styles.container}>
       <Header />
@@ -43,7 +44,11 @@ const Home = ({ navigation }) => {
         <View
           style={[styles.btnTab, status === 'Tokens' && styles.activeBtnTab]}
         >
-          <TouchableOpacity onPress={() => selectTabHandler('Tokens')}>
+          <TouchableOpacity
+            onPress={() => {
+              setStatus('Tokens');
+            }}
+          >
             <Text
               style={{
                 color: COLORS.primary,
@@ -56,7 +61,11 @@ const Home = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <View style={[styles.btnTab, status === 'NFT' && styles.activeBtnTab]}>
-          <TouchableOpacity onPress={() => selectTabHandler('NFT')}>
+          <TouchableOpacity
+            onPress={() => {
+              setStatus('NFT');
+            }}
+          >
             <Text
               style={{
                 color: COLORS.primary,
@@ -69,6 +78,8 @@ const Home = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </View>
+
+      {status === 'Tokens' ? <Tokens /> : <NftSection />}
     </SafeAreaView>
   );
 };
@@ -77,7 +88,7 @@ export default Home;
 
 const styles = StyleSheet.create({
   container: {
-    padding: 5,
+    padding: 1,
   },
   wallet: {
     justifyContent: 'center',
@@ -102,5 +113,9 @@ const styles = StyleSheet.create({
     borderBottomColor: '#b8860b',
     borderBottomWidth: 4,
     // backgroundColor:'pink'
+  },
+  tokenlist: {
+    flexDirection: 'row',
+    paddingVertical: 5,
   },
 });
