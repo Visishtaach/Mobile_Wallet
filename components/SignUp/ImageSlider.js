@@ -9,7 +9,7 @@ import React from 'react';
 import { COLORS, SIZES, FONT } from '../../constants';
 
 export default function ImageSlider({ item }) {
-  console.log(item);
+  // console.log(item);
   const { width } = useWindowDimensions();
   return (
     <View style={[styles.container, { width }]}>

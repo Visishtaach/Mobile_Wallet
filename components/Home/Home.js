@@ -19,7 +19,7 @@ import NftSection from './NftSection';
 const Home = ({ navigation }) => {
   const [walletAmount, setWalletAmount] = useState(0);
   const [status, setStatus] = useState('Tokens');
-  console.log(TokensAdded);
+  // console.log(TokensAdded);
 
   return (
     <SafeAreaView style={styles.container}>

@@ -18,21 +18,24 @@ import { WalletAccounts } from '../../helpers/WalletAccounts';
 const Screen1 = ({ navigation }) => {
   const data = WalletAccounts;
   const insets = useSafeAreaInsets();
-  const Item = ({ title, icon }) => {
-    // console.log(title);
+
+  const Item = ( item ) => {
+    // const item = title
+    console.log(item);
+  
     return (
       <View style={styles.item}>
       <View style={{flexDirection:'row', gap:5}}>
         <View style={{width:40,height:40, borderWidth:1,borderColor:COLORS.gray3,borderRadius:30,justifyContent:'center',alignItems: 'center'}}>
-          <Image source={icon} style={{width:30,height:30,top:2,}}/>
+          <Image source={item.image} style={{width:30,height:30,top:2,}}/>
         </View>
         <View>
-          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.title}>{item.name}</Text>
           <Text style={{color:COLORS.gray2}}>Multi coin wallet</Text>
         </View>
         </View>
         <View>
-        <TouchableOpacity onPress={()=>{}}>
+        <TouchableOpacity onPress={()=>navigation.navigate('Screen2',{item})}>
           <MaterialCommunityIcons name="dots-vertical" style={{fontSize:SIZES.large}}/>
           </TouchableOpacity>
         </View>
@@ -61,10 +64,14 @@ const Screen1 = ({ navigation }) => {
         <View>
           <FlatList
             data={data}
-            renderItem={({ item }) => (
-              <Item title={item.name} icon={item.image} />
-            )}
+            renderItem={({ item }) => {
+              return(Item(item))
+            }
             
+            
+              // <Item title={item.name} icon={item.image} />
+            }
+            keyExtractor={item => item.id}
           />
         </View>
       </View>
