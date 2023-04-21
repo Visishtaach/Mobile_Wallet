@@ -6,6 +6,7 @@ import {
     TouchableOpacity,
   } from 'react-native';
   import React from 'react';
+  import { COLORS } from '../../constants';
   
   const NftSection = () => {
     return (
@@ -30,7 +31,7 @@ import {
           style={{ color: '#6CB4EE', padding: 6 }}
           onPress={() => {}}
         >
-          <Text style={{ color: '#B9D9EB' }}>Open on OpenSea.io</Text>
+          <Text style={{ color: COLORS.gray3,marginTop:15 }}>Open on OpenSea.io</Text>
         </TouchableOpacity>
       </View>
     );
@@ -42,12 +43,12 @@ import {
     container: {
       width: window.width,
       height: '55%',
-      backgroundColor: 'black',
+      // backgroundColor: 'black',
       alignItems: 'center',
       justifyContent: 'center',
     },
     image: {
-      opacity: 1,
+      opacity: 0.6,
     },
     btn: {
       width: 100,

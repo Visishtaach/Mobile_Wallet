@@ -23,7 +23,7 @@ const Home = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header />
+      <Header navigation = {navigation}/>
       <View style={styles.wallet}>
         <Text
           style={styles.walletText}
@@ -79,7 +79,7 @@ const Home = ({ navigation }) => {
         </View>
       </View>
 
-      {status === 'Tokens' ? <Tokens /> : <NftSection />}
+      {status === 'Tokens' ? <Tokens navigation={navigation}/> : <NftSection />}
     </SafeAreaView>
   );
 };

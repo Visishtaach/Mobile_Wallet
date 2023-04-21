@@ -12,6 +12,7 @@ import Browser from '../components/Home/Browser';
 import Screen1 from '../components/Screens/Screen1';
 import Screen2 from '../components/Screens/Screen2';
 import Discover from '../components/Home/Discover';
+import Search from '../components/Screens/Search';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Feather from '@expo/vector-icons/Feather';
@@ -83,6 +84,7 @@ export default function Auth() {
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="Screen1" component={Screen1} />
         <Stack.Screen name="Screen2" component={Screen2} />
+        <Stack.Screen name="Search" component={Search} />
       </Stack.Navigator>
     </NavigationContainer>
 

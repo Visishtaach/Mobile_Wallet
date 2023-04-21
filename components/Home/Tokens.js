@@ -13,7 +13,8 @@ import { TokensAdded } from '../../helpers/TokensAdded';
 
 const window = Dimensions.get('window');
 
-const Tokens = () => {
+const Tokens = ({navigation}) => {
+  // const { navigate } = props.navigation;
   const insets = useSafeAreaInsets();
   const data = TokensAdded;
 
@@ -26,7 +27,7 @@ const Tokens = () => {
               <Text style={{ fontSize: 18 }}>
                 {token.icon} - {token.tokenName}
               </Text>
-              <Text style={{ fontSize: 14 }}>
+              <Text style={{ fontSize: 12,color:'gray' }}>
                 {token.price} {token.rate}
               </Text>
             </View>
@@ -36,10 +37,8 @@ const Tokens = () => {
           </View>
         ))}
 
-        <TouchableOpacity
-          onPress={() => {
-            // console.log('add tokens');
-          }}
+        <TouchableOpacity onPress={() => navigation.navigate('Search')}
+          // onPress={() => navigate('Search')}
         >
           <Text style={{ padding: 2, fontSize: 18 }}>
             Add Tokens
